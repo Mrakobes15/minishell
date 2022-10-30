@@ -6,7 +6,7 @@
 /*   By: risolon <risolon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:29:44 by risolon           #+#    #+#             */
-/*   Updated: 2022/10/29 19:36:50 by risolon          ###   ########.fr       */
+/*   Updated: 2022/10/30 14:45:45 by risolon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ extern int	g_error;
 
 int	lexer(t_info *info)
 {
-	printf("lexer\n");
+	signal(SIGINT, sig_void);
 	if (ft_quot(info->line))
 		return (ft_error(info, 4));
 	if (check_pipes(info) || check_redir(info))

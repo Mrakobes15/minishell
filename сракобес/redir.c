@@ -118,7 +118,7 @@ void	rebuild_redir(t_info *info)
 	i = 1;
 	while (info->commands[i])
 	{
-		if (info->commands[i][0] == ';')
+		if (info->commands[i][0] != ';')
 		{
 			while (ft_strnstr(info->commands[i], "<<", \
 				ft_strlen(info->commands[i])))

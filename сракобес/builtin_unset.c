@@ -6,7 +6,7 @@
 /*   By: risolon <risolon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 20:23:28 by ccamembe          #+#    #+#             */
-/*   Updated: 2022/10/29 17:41:36 by risolon          ###   ########.fr       */
+/*   Updated: 2022/10/30 19:34:21 by risolon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,10 @@ int	ft_unset(char *var, t_info *info)
 		if (!ft_unset_print_err(splited, i))
 			return (1);
 		ft_unset_helper(splited[i], len, info);
-		i++;
+		if (splited[i + 1])
+			i++;
+		else
+			break ;
 		len = ft_strlen(splited[i]);
 	}
 	set_envp(info);

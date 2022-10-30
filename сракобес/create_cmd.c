@@ -6,7 +6,7 @@
 /*   By: risolon <risolon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:18:56 by risolon           #+#    #+#             */
-/*   Updated: 2022/10/29 19:36:44 by risolon          ###   ########.fr       */
+/*   Updated: 2022/10/30 16:59:34 by risolon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ char	***create_cmd(t_info *info)
 
 	i = 0;
 	order = 0;
-	printf("cmd\n");
 	cmd = NULL;
 	len = command_count(info->commands);
 	if (len != 0)
